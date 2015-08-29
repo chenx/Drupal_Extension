@@ -100,7 +100,11 @@ require_once './includes/bootstrap.inc';
 define('DRUPAL_ROOT', getcwd());
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 
-include "header.php";
+if (is_admin()) {
+    include "header_admin.php";
+} else {
+    include "header.php";
+}
 
 
 if (is_user_logged_in()) {
@@ -113,6 +117,11 @@ if (is_user_logged_in()) {
 function is_user_logged_in() {
     global $user;
     return isset($user) && $user->uid > 0;
+}
+
+function is_admin() {
+    global $user;
+    return in_array("administrator", $user->roles);
 }
 
 function showUserInfo() {
