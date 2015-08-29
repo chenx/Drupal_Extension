@@ -12,14 +12,28 @@ This project aims to find a way to allow develop any custom functions based on a
 
 For this purpose, one should be able to create custom roles (user groups), members of such roles may or may not be able to post blogs, but can access custom pages once log in. Several things are crucial:
 
-1) create custom role(s).
-2) check if a user is logged in, and access user profile such as ID, login name, user name, email, user type. Based on this, one can add custom database tables and build whatever function that is desired.
-3) make use of Drupal theme in custom page.
+1) create custom role(s).   
+2) check if a user is logged in, and access user profile such as ID, login name, user name, email, user type. Based on this, one can add custom database tables and build whatever function that is desired.   
+3) make use of Drupal theme in custom page.   
 
 A study on these requirements proves fruitful. Over the past week, I was able to build a member page for some Drupal themes. It's easy to extend to more themes.
 
 
 # How to use templates in this project
+
+The projects contains a series of folders member_[theme]. Each folder is for a different theme. Right now the available themes include:
+
+- Bartik
+
+In order to use the templates, follow these steps:
+
+- Copy the theme template folder(s) to your Drupal installation root
+- In Drupal admin bar, go to Appearance, active your theme, say "Bartik".
+- In Drupal admin bar, go to Structure -> Menus, in "Main menu" section, click on "Add Link", add link to "member".
+  - Note: if the "Member" link already exists, you can just update its URL.
+- Now visit your Drupal homepage, click on "Member" link, it'll bring you to the custom page.
+
+That's all.
 
 
 # Implementation: Basics
@@ -161,6 +175,6 @@ Then you can modify /themes/[theme]/templates/page.tpl.php, and append this code
 # References:
 
 [1] http://www.nguyenquyhy.com/2014/06/access-current-user-outside-of-drupal/  
-[2] <a href="https://www.drupal.org/node/55296">Hide navigation for anon users</a>
-[3] <a href="https://www.drupal.org/node/50413">Role based visibility of menu items</a>
+[2] <a href="https://www.drupal.org/node/55296">Hide navigation for anon users</a>   
+[3] <a href="https://www.drupal.org/node/50413">Role based visibility of menu items</a>   
 
