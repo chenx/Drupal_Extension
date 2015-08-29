@@ -86,11 +86,11 @@ EOF;
     var_dump($user);
 ```
 
-## 3) Use WordPress theme in custom page.
+## 3) Use Drupal theme in custom page.
 
-Different from WordPress, which uses get_header() and get_footer() functions for a theme, Drupal uses page template. So at present, this project create custom header and footer by extracting html source from an existing page of the current theme.
+Different from WordPress, which uses get_header() and get_footer() functions for a theme, Drupal uses page template. So at present, this project creates custom header and footer by extracting html source from an existing page of the current theme.
 
-So far, a minimal template page is like this:
+So far, a minimal template page looks like this:
 
 ```php
 <?php
