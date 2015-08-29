@@ -35,8 +35,8 @@ Basically, in order to access Drupal's built in framework functions, you need to
 /*
  * Note: chdir() must use the root of drupal. Otherwise it won't work.
  */
-chdir('/home2/cssauhco/www/xc/drupal7');
-$base_url = 'http://cssauh.com/xc/drupal7';
+chdir('/var/www/html/drupal'); // Drupal root directory.
+$base_url = 'http://mysite.com/drupal'; // Drupal site url.
 require_once './includes/bootstrap.inc';
 define('DRUPAL_ROOT', getcwd());
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
@@ -78,11 +78,8 @@ So far, a minimal template page is like this:
 
 ```php
 <?php
-/*
- * Note: chdir() must use the root of drupal. Otherwise it won't work.
- */
-chdir('/home2/cssauhco/www/xc/drupal7');
-$base_url = 'http://cssauh.com/xc/drupal7';
+chdir('/var/www/html/drupal'); // Drupal root directory.
+$base_url = 'http://mysite.com/drupal'; // Drupal site url.
 require_once './includes/bootstrap.inc';
 define('DRUPAL_ROOT', getcwd());
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
@@ -119,3 +116,51 @@ include("footer.php");
 ?>
 
 ```
+
+
+# Implementation: More Details
+
+## 1) Hide a menu item
+
+Say you have the "member" menu item when a user logs in. However you want to hide it for anonymous users. There are some online discussions for this [2][3]. 
+
+Of course the more formal way is to look into Drupal source code to hide a menu item at menu generation time.
+
+A more simple way is to hide it using javascript when the page loads.
+
+For example, checking the menu's html source you see this:
+
+```html
+<ul id="main-menu-links" class="links clearfix">
+    <li class="menu-218 first active"><a href="/" class="active">Home</a></li>
+    <li class="menu-308 last"><a href="http://mysite.com/member/">Member</a></li>
+</ul>    
+```
+
+Then you can modify /themes/[theme]/templates/page.tpl.php, and append this code to the end:
+
+```php
+<?php if (! isset($user) || $user->uid == 0) { ?>
+<script type="text/javascript">
+    var v = document.getElementsByClassName('menu-308 last');
+    v[0].style.display = 'none';
+</script>
+<?php } ?>
+```
+
+# Misc Stuff
+
+- Drupal site setting is in: /sites/default/settings.php  
+
+- Drupal site theme is in: /themes/[theme]/   
+
+- Drupal theme page template: /themes/[theme]/templates/page.tpl.php  
+
+
+
+# References:
+
+[1] http://www.nguyenquyhy.com/2014/06/access-current-user-outside-of-drupal/  
+[2] <a href="https://www.drupal.org/node/55296">Hide navigation for anon users</a>
+[3] <a href="https://www.drupal.org/node/50413">Role based visibility of menu items</a>
+
