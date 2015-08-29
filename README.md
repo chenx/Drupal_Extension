@@ -171,6 +171,25 @@ Then you can modify /themes/[theme]/templates/page.tpl.php, and append this code
 - Drupal theme page template: /themes/[theme]/templates/page.tpl.php  
 
 
+# Future Work
+
+
+# Summary
+
+This project shows how to create custom pages for logged in users of a Drupal site.
+
+
+# License
+
+Apache/BSD/MIT/GPLv2
+
+
+# Author
+
+X. Chen
+Created On: August 28, 2015
+Last Modified: August 28, 2015 
+
 
 # References:
 
