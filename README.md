@@ -24,6 +24,8 @@ A study on these requirements proves fruitful. Over the past week, I was able to
 The projects contains a series of folders member_[theme]. Each folder is for a different theme. Right now the available themes include:
 
 - Bartik
+- Bluez
+- Business
 
 In order to use the templates, follow these steps:
 
@@ -190,7 +192,7 @@ Or more general, for any theme, append this code to end of /themes/[theme]/templ
 - Drupal theme page template: /themes/[theme]/templates/page.tpl.php  
 
 - Installed themes are stored in /sites/all/themes/. Delete a theme folder here, it will disappear from admin page.
-- 
+
 
 # Future Work
 
