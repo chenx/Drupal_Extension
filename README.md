@@ -151,13 +151,32 @@ For example, checking the menu's html source you see this:
 </ul>    
 ```
 
-Then you can modify /themes/[theme]/templates/page.tpl.php, and append this code to the end:
+Then you can modify /themes/[theme]/templates/page.tpl.php, and append this code (this is good for the Bartik theme) to the end:
 
 ```php
 <?php if (! isset($user) || $user->uid == 0) { ?>
 <script type="text/javascript">
     var v = document.getElementsByClassName('menu-308 last');
     v[0].style.display = 'none';
+</script>
+<?php } ?>
+```
+
+Or more general, for any theme, append this code to end of /themes/[theme]/templates/html.tpl.php (for home page) and /themes/[theme]/templates/page.tpl.php (for other pages).
+
+```php
+<?php if (! isset($user) || $user->uid == 0) { ?>
+<script type="text/javascript">
+    var div = document.getElementsByClassName('menu');
+    var ul = div[0];
+    //alert(ul.innerHTML);
+    for (var i = 0, n = ul.childNodes.length; i < n; i += 2) {
+        var item = ul.childNodes[i];
+        if (item.innerHTML.indexOf('Member') > 0) {
+            //alert(item.innerHTML);
+            item.style.display = 'none';
+        }
+    }
 </script>
 <?php } ?>
 ```
@@ -170,6 +189,8 @@ Then you can modify /themes/[theme]/templates/page.tpl.php, and append this code
 
 - Drupal theme page template: /themes/[theme]/templates/page.tpl.php  
 
+- Installed themes are stored in /sites/all/themes/. Delete a theme folder here, it will disappear from admin page.
+- 
 
 # Future Work
 
@@ -186,9 +207,9 @@ Apache/BSD/MIT/GPLv2
 
 # Author
 
-X. Chen
-Created On: August 28, 2015
-Last Modified: August 28, 2015 
+X. Chen  
+Created On: August 28, 2015  
+Last Modified: August 28, 2015   
 
 
 # References:
