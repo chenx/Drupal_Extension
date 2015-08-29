@@ -1,5 +1,5 @@
 # Drupal_Extension
-Extension to customize WordPress as website framework.
+Extension to customize Drupal as website framework.
 
 # About
 
