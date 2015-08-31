@@ -205,9 +205,16 @@ In WordPress a user registers and by default is approved. In Drupal, by default 
 
 ## Register Catpcha
 
-This are some Drupal plugins for this.
+This are some Drupal plugins for this. See [4].
 
-See 
+
+## Forum plugins
+
+There are some Drupal plugins for forum. See [5][6].
+
+## Create your own plugin
+
+See [7].
 
 
 # Misc Stuff
@@ -247,3 +254,7 @@ Last Modified: August 28, 2015
 [2] <a href="https://www.drupal.org/node/55296">Hide navigation for anon users</a>   
 [3] <a href="https://www.drupal.org/node/50413">Role based visibility of menu items</a>   
 [4] <a href="https://www.drupal.org/project/captcha">Drupal Captcha plugin</a>
+[5] <a href="http://www.bestplugins.com/cms/drupal-forum-modules.html">6 Best Drupal Forum Module - Best Plugin</a>
+[6] <a href="https://groups.drupal.org/node/5470">Comparison of current forum software</a>
+[7] <a href="https://www.drupal.org/node/1246602">Create your own plugins</a>
+
