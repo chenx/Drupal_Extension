@@ -257,4 +257,7 @@ Last Modified: August 28, 2015
 [5] <a href="http://www.bestplugins.com/cms/drupal-forum-modules.html">6 Best Drupal Forum Module - Best Plugin</a>
 [6] <a href="https://groups.drupal.org/node/5470">Comparison of current forum software</a>
 [7] <a href="https://www.drupal.org/node/1246602">Create your own plugins</a>
+[8] <a href="https://drupalize.me/blog/201409/unravelling-drupal-8-plugin-system">Unravelling the Drupal 8 Plugin System</a>
+[9] <a href="https://www.ostraining.com/">Training videos for Joomla, WordPress, Drupal</a>
+[10] <a href="http://www.bigtunainteractive.com/wordpress-vs-drupal/">Drupal vs WordPress</a>
 
