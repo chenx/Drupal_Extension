@@ -192,6 +192,24 @@ Or more general, for any theme, append this code to end of /themes/[theme]/templ
 <?php } ?>
 ```
 
+
+## Multiple levels of menu
+
+Drupal by default takes care of this. It also defines weight of menu items for their ordering.
+
+
+## Register approval
+
+In WordPress a user registers and by default is approved. In Drupal, by default a user registers and needs admin approval to be activated. 
+
+
+## Register Catpcha
+
+This are some Drupal plugins for this.
+
+See 
+
+
 # Misc Stuff
 
 - Drupal site setting is in: /sites/default/settings.php  
@@ -228,4 +246,4 @@ Last Modified: August 28, 2015
 [1] http://www.nguyenquyhy.com/2014/06/access-current-user-outside-of-drupal/  
 [2] <a href="https://www.drupal.org/node/55296">Hide navigation for anon users</a>   
 [3] <a href="https://www.drupal.org/node/50413">Role based visibility of menu items</a>   
-
+[4] <a href="https://www.drupal.org/project/captcha">Drupal Captcha plugin</a>
