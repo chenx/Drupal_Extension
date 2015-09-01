@@ -207,6 +207,7 @@ Or you could do this:
 
 ```php
 <?php if (! isset($user) || $user->uid == 0) { ?>
+<script type="text/javascript">
 function hideMemLink() {
     var menu = document.getElementById('main-menu');
     if (menu === null) return;
@@ -221,6 +222,7 @@ function hideMemLink() {
 }
 
 hideMemLink();
+</script>
 <?php } ?>
 ```
 
