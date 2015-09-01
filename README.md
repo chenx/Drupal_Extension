@@ -173,7 +173,18 @@ Then you can modify /themes/[theme]/templates/page.tpl.php, and append this code
 <?php } ?>
 ```
 
-Or more general, for any theme, append this code to end of /themes/[theme]/templates/html.tpl.php (for home page) and /themes/[theme]/templates/page.tpl.php (for other pages).
+Sometimes the main menu section is like this:
+
+```html
+<div id="main-menu">
+    <ul class="menu">
+        <li class="first leaf"><a href="/" class="active">Home</a></li>
+        <li class="leaf"><a href="/member_business" title="Member homepage.">Member</a></li>
+    </ul>
+</div>
+```
+
+Then you can append this code to end of /themes/[theme]/templates/html.tpl.php (for homepage, if this file exists) and /themes/[theme]/templates/page.tpl.php (for other pages).
 
 ```php
 <?php if (! isset($user) || $user->uid == 0) { ?>
@@ -189,6 +200,27 @@ Or more general, for any theme, append this code to end of /themes/[theme]/templ
         }
     }
 </script>
+<?php } ?>
+```
+
+Or you could do this:
+
+```php
+<?php if (! isset($user) || $user->uid == 0) { ?>
+function hideMemLink() {
+    var menu = document.getElementById('main-menu');
+    if (menu === null) return;
+
+    var nodes = menu.getElementsByTagName('li');
+    for (var i = 0, n = nodes.length; i < n; ++ i) {
+        var node = nodes[i];
+        if (node.innerHTML.indexOf('Member') > 0) {
+            node.style.display = 'none';
+        }
+    }
+}
+
+hideMemLink();
 <?php } ?>
 ```
 
