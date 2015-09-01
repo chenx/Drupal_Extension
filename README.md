@@ -190,13 +190,12 @@ Then you can append this code to end of /themes/[theme]/templates/html.tpl.php (
 <?php if (! isset($user) || $user->uid == 0) { ?>
 <script type="text/javascript">
     var div = document.getElementsByClassName('menu');
-    var ul = div[0];
-    //alert(ul.innerHTML);
+    var ul = div[0];  //alert(ul.innerHTML);
     for (var i = 0, n = ul.childNodes.length; i < n; i += 2) {
         var item = ul.childNodes[i];
         if (item.innerHTML.indexOf('Member') > 0) {
-            //alert(item.innerHTML);
             item.style.display = 'none';
+            break;
         }
     }
 </script>
@@ -217,6 +216,7 @@ function hideMemLink() {
         var node = nodes[i];
         if (node.innerHTML.indexOf('Member') > 0) {
             node.style.display = 'none';
+            break;
         }
     }
 }
