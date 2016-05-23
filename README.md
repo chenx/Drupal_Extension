@@ -287,12 +287,12 @@ Last Modified: August 28, 2015
 [1] http://www.nguyenquyhy.com/2014/06/access-current-user-outside-of-drupal/  
 [2] <a href="https://www.drupal.org/node/55296">Hide navigation for anon users</a>   
 [3] <a href="https://www.drupal.org/node/50413">Role based visibility of menu items</a>   
-[4] <a href="https://www.drupal.org/project/captcha">Drupal Captcha plugin</a>
-[5] <a href="http://www.bestplugins.com/cms/drupal-forum-modules.html">6 Best Drupal Forum Module - Best Plugin</a>
-[6] <a href="https://groups.drupal.org/node/5470">Comparison of current forum software</a>
-[7] <a href="https://www.drupal.org/node/1246602">Create your own plugins</a>
-[8] <a href="https://drupalize.me/blog/201409/unravelling-drupal-8-plugin-system">Unravelling the Drupal 8 Plugin System</a>
-[9] <a href="https://www.ostraining.com/">Training videos for Joomla, WordPress, Drupal</a>
-[10] <a href="http://www.bigtunainteractive.com/wordpress-vs-drupal/">Drupal vs WordPress</a>
-[11] <a href="http://www.webnethosting.net/wordpress-vs-joomla-vs-drupal-cms-popularity-war/">WordPress vs Joomla vs Drupal – CMS Popularity War</a>
+[4] <a href="https://www.drupal.org/project/captcha">Drupal Captcha plugin</a>  
+[5] <a href="http://www.bestplugins.com/cms/drupal-forum-modules.html">6 Best Drupal Forum Module - Best Plugin</a>  
+[6] <a href="https://groups.drupal.org/node/5470">Comparison of current forum software</a>  
+[7] <a href="https://www.drupal.org/node/1246602">Create your own plugins</a>  
+[8] <a href="https://drupalize.me/blog/201409/unravelling-drupal-8-plugin-system">Unravelling the Drupal 8 Plugin System</a>  
+[9] <a href="https://www.ostraining.com/">Training videos for Joomla, WordPress, Drupal</a>  
+[10] <a href="http://www.bigtunainteractive.com/wordpress-vs-drupal/">Drupal vs WordPress</a>  
+[11] <a href="http://www.webnethosting.net/wordpress-vs-joomla-vs-drupal-cms-popularity-war/">WordPress vs Joomla vs Drupal – CMS Popularity War</a>  
 
